@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  </head>
+  <body>
+    
+    <div class="button_cont" align="center"><a class="example_e" target="_blank" rel="nofollow noopener">MY SKILL</a></div>
+    
+    <div class="social-menu">
+        <ul>
+          <li><a><i class="fab fa-html5"></i></a></li>
+          <li><a><i class="fab fa-css3-alt"></i></a></li>
+          <li><a><i class="fab fa-js-square"></i></a></li>
+          <li><a><i class="fab fa-node-js"></i></a></li>
+          <li><a><i class="fab fa-react"></i></a></li>
+          <li><a><i class="fas fa-database"></i></a></li>
+        </ul>
+      </div>
+
+
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-name">HTML</div>
+        <div class="skill-bar">
+          <div class="skill-per" per="90"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">CSS</div>
+        <div class="skill-bar">
+          <div class="skill-per" per="85"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Javascript</div>
+        <div class="skill-bar">
+          <div class="skill-per" per="87"></div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-name">Node.JS</div>
+        <div class="skill-bar">
+          <div class="skill-per" per="78"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">ReactJS</div>
+        <div class="skill-bar">
+          <div class="skill-per" per="79"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">MongoDB</div>
+        <div class="skill-bar">
+          <div class="skill-per" per="81"></div>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+
+    <script>
+      $('.skill-per').each(function(){
+        var $this = $(this);
+        var per = $this.attr('per');
+        $this.css("width",per+'%');
+        $({animatedValue: 0}).animate({animatedValue: per},{
+          duration: 1000,
+          step: function(){
+            $this.attr('per', Math.floor(this.animatedValue) + '%');
+          },
+          complete: function(){
+            $this.attr('per', Math.floor(this.animatedValue) + '%');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
